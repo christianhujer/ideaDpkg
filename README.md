@@ -21,3 +21,18 @@ Typical command sequence:
     dpkg -i dist/*.deb
     idea.sh
     dpkg -r dist/*.deb
+
+## Create .deb
+
+You can even pre-bundle plugins this way, like IdeaVim.
+
+Typical command sequence:
+
+    # Download the desired IntelliJ version.
+    sudo make install
+    idea.sh
+    # Install the desired plugins.
+    sudo cp -r ~/.IdeaIC14/plugins/*/ /opt/local/idea-IC-.../plugins/
+    make
+
+Now your .deb is ready to distribute to your client machines.
