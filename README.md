@@ -10,3 +10,14 @@ Scans the directory for the latest `idea-IC-*.tar.gz` and installs resp. uninsta
 (requires a previous run of `sudo make install`)
 Creates a .deb archive of your IntelliJ IDEA installation.
 This .deb archive can then be installed and uninstalled using `dpkg -i` resp. `dpkg -r`.
+
+## Debug
+
+Typical command sequence:
+
+    sudo make install
+    make
+    sudo make uninstall
+    dpkg -i dist/*.deb
+    idea.sh
+    dpkg -r dist/*.deb
