@@ -11,7 +11,7 @@ PREFIX:=/opt/local/
 
 
 ifeq (,$(filter help,$(MAKECMDGOALS)))
-IDEA_DEFAULT_VERSION:=$(error Need IDEA_VERSION:=version, i.e. IDEA_VERSION:=ideaIC-140.2110.5. I can guess the version from an idea*.tar.gz file if there one in this directory.)
+IDEA_DEFAULT_VERSION?=$(error Need IDEA_VERSION:=version, i.e. IDEA_VERSION:=ideaIC-140.2110.5. I can guess the version from an idea*.tar.gz file if there one in this directory.)
 else
 IDEA_DEFAULT_VERSION:=Unable to determine version.
 endif
