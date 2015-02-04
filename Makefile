@@ -66,4 +66,5 @@ dist/intellij-idea.deb: debian-binary control.tar.gz data.tar.gz
 	mkdir -p $(dir $@)
 	ar -Drc $@ $^
 
+# Get makehelp from https://github.com/christianhujer/makehelp
 -include makehelp/Help.mak
